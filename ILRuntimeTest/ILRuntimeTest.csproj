@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6DD179D-FA31-4425-BDE1-9DD0BE0A9BE1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ILRuntimeTest</RootNamespace>
+    <AssemblyName>ILRuntimeTest</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\Dependencies\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>..\Dependencies\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>..\Dependencies\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\ClassInheritanceTestAdaptor.cs" />
+    <Compile Include="Adapters\IAsyncStateMachineAdaptor.cs" />
+    <Compile Include="Adapters\TestVector3Binder.cs" />
+    <Compile Include="AutoGenerate\CLRBindings.cs" />
+    <Compile Include="Adapters\helper.cs" />
+    <Compile Include="Adapters\TestClass2Adaptor.cs" />
+    <Compile Include="Adapters\TestClass3Adaptor.cs" />
+    <Compile Include="Adapters\TestClass4Adaptor.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestBase_ExtensionClass_1_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestBase_ExtensionClass_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestBase_GenericExtensions_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestBase_StaticGenericMethods_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestBase_SubExtensionClass_1_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestBase_SubExtensionClass_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_BaseClassTest_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_ClassInheritanceTest2_1_ILRuntimeTest_TestFramework_C_t.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_ClassInheritanceTest_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_DelegateTest_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_IntDelegate2_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_IntDelegate_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_TestClass2_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_TestClass3_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_TestStruct_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_TestVector3_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_TestVectorClass_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_TestVectorStruct2_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestFramework_TestVectorStruct_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntimeTest_TestMainForm_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntime_CLR_TypeSystem_IType_Binding.cs" />
+    <Compile Include="AutoGenerate\ILRuntime_Runtime_Enviorment_AppDomain_Binding.cs" />
+    <Compile Include="AutoGenerate\LitJson_JsonMapper_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Action_1_ILTypeInstance_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Action_1_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Action_1_String_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Action_3_Int32_String_String_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Action_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Activator_Binding.cs" />
+    <Compile Include="AutoGenerate\System_ArgumentException_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Array_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Boolean_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Byte_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Char_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_ILTypeInstance_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_Int32_ILRuntimeTest_TestFramework_ClassIn_t.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_Int32_ILTypeInstance_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_Int32_ILTypeInstance_Binding_ValueCollect_t.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_Int32_ILTypeInstance_Binding_ValueCollect_t_t.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_Int32_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_Int32_Int32_Binding_Enumerator_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_Int64_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_Int64_Int64_Array_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_Object_Object_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_String_ILTypeInstance_Array_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_String_ILTypeInstance_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_String_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_String_Int32_Binding_Enumerator_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_String_Object_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_Type_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_UInt32_ILTypeInstance_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_Dictionary_2_UInt32_ILTypeInstance_Binding_Enumerator__t.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_IEnumerator_1_KeyValuePair_2_Int32_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_KeyValuePair_2_Int32_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_KeyValuePair_2_String_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_KeyValuePair_2_String_IType_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_KeyValuePair_2_UInt32_ILTypeInstance_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_Dictionary_2_String_Object_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_ILRuntimeTest_TestFramework_ClassInheritanceTes_t.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_ILRuntimeTest_TestFramework_TestClass3Adaptor_B_t.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_ILTypeInstance_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_ILTypeInstance_Binding_Enumerator_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_Int32_Array_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_List_1_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_List_1_List_1_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_Object_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_String_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_String_Binding_Enumerator_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_Generic_List_1_Task_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_IDictionary_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Collections_IEnumerator_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Console_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Convert_Binding.cs" />
+    <Compile Include="AutoGenerate\System_DateTime_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Diagnostics_Stopwatch_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Double_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Enum_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Exception_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Func_2_Int32_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Func_4_Int32_Single_Int16_Double_Binding.cs" />
+    <Compile Include="AutoGenerate\System_IComparable_1_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_IDisposable_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Int32_Array2_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Int32_Array3_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Int32_Array_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Int32_Array_Binding_Array_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_IO_FileStream_Binding.cs" />
+    <Compile Include="AutoGenerate\System_IO_File_Binding.cs" />
+    <Compile Include="AutoGenerate\System_IO_Stream_Binding.cs" />
+    <Compile Include="AutoGenerate\System_IO_TextReader_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Linq_Enumerable_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Math_Binding.cs" />
+    <Compile Include="AutoGenerate\System_NotImplementedException_Binding.cs" />
+    <Compile Include="AutoGenerate\System_NotSupportedException_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Nullable_1_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Object_Array_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Object_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Reflection_FieldInfo_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Reflection_MemberInfo_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Reflection_MethodBase_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Reflection_PropertyInfo_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Runtime_CompilerServices_AsyncTaskMethodBuilder_1_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Runtime_CompilerServices_AsyncTaskMethodBuilder_1_List_1_String_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Runtime_CompilerServices_AsyncTaskMethodBuilder_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Runtime_CompilerServices_TaskAwaiter_1_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Runtime_CompilerServices_TaskAwaiter_1_List_1_String_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Runtime_CompilerServices_TaskAwaiter_1_String_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Runtime_CompilerServices_TaskAwaiter_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Single_Binding.cs" />
+    <Compile Include="AutoGenerate\System_String_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Threading_Tasks_Task_1_Int32_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Threading_Tasks_Task_1_List_1_String_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Threading_Tasks_Task_1_String_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Threading_Tasks_Task_Binding.cs" />
+    <Compile Include="AutoGenerate\System_Type_Binding.cs" />
+    <Compile Include="TestFramework\GenericExtensions.cs" />
+    <Compile Include="TestFramework\TestCLRAttribute.cs" />
+    <Compile Include="TestFramework\TestVector3.cs" />
+    <Compile Include="TestFramework\TestCLREnum.cs" />
+    <Compile Include="TestMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestMainForm.Designer.cs">
+      <DependentUpon>TestMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestBase\BaseTestUnit.cs" />
+    <Compile Include="TestBase\InstanceTestUnit.cs" />
+    <Compile Include="TestBase\ITestable.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestBase\StaticTestUnit.cs" />
+    <Compile Include="TestBase\TestResultInfo.cs" />
+    <Compile Include="TestFramework\ClassInheritanceTest.cs" />
+    <Compile Include="TestFramework\DelegateTest.cs" />
+    <Compile Include="TestFramework\TestClass2.cs" />
+    <Compile Include="TestFramework\TestClass3.cs" />
+    <EmbeddedResource Include="TestMainForm.resx">
+      <DependentUpon>TestMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ILRuntime\ILRuntime.csproj">
+      <Project>{79ef2f29-89d1-4097-986c-5e4eefe0fa33}</Project>
+      <Name>ILRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LitJson\LitJson.csproj">
+      <Project>{bec78343-4ba2-4757-807f-7cdbf1f70c83}</Project>
+      <Name>LitJson</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
